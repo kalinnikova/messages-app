@@ -1,0 +1,40 @@
+.header {
+    padding: 0 16em;
+    display: flex;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 0 5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0 1em;
+    }
+}
+
+.header-link {
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s color;
+    font-weight: 400;
+    display: flex;
+}
+
+.header-link:hover {
+    color: #646464;
+}
+
+.header-link:hover svg {
+    fill: #646464;
+}
+
+.header-image {
+    width: 2em;
+    margin-left: 0.5em;
+    margin-top: 0.75em;
+    transition: 0.3s fill;
+}

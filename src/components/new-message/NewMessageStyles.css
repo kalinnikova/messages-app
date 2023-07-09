@@ -1,0 +1,64 @@
+.title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.button {
+    height: 3em;
+    background-color: #e0edff;
+    padding: 0.9em 1em 1em 1em;
+    margin-left: auto;
+    border: none;
+    border-radius: 0.75em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s background-color;
+}
+
+.button:hover {
+    background-color: #e0fffc;
+}
+
+.modal-content {
+    border-radius: 0.5em;
+    width: 32em;
+    min-height: 12.75em;
+}
+
+.modal-title {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.modal-subtitle {
+    color: gray;
+    font-size: 0.75em;
+    margin-bottom: 0.5em;
+}
+
+.modal-textarea {
+    border-radius: 0.75em;
+    width: 36.75em;
+    height: 7em;
+    border-color: #898d8d;
+    outline: none;
+    padding: 0.75em;
+    font-family: inherit;
+    margin-bottom: 1em;
+}
+
+.message-counter {
+    color: gray;
+    float: right;
+    font-size: 0.75em;
+}
+
+.author-input {
+    padding: 0.75em;
+    width: 36.75em;
+    border-radius: 0.75em;
+    outline: none;
+    border: 1px solid gray;
+    margin-bottom: 1em;
+}
