@@ -5,12 +5,12 @@ import {messagesAPI} from "../../services/MessagesService";
 import {IMessage} from "../../models/IMessage";
 
 export const NewMessage = () => {
+    const messageMaxLength = 200;
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [author, setAuthor] = useState("");
     const [message, setMessage] = useState("");
-    const [counter, setCounter] = useState(200);
-    // eslint-disable-next-line no-empty-pattern
-    const [createMessage, {}] = messagesAPI.useCreateMessageMutation();
+    const [counter, setCounter] = useState(messageMaxLength);
+    const [createMessage] = messagesAPI.useCreateMessageMutation();
 
     const openModal = () => {
         setModalIsOpen(true);
@@ -22,7 +22,7 @@ export const NewMessage = () => {
 
     const changeMessage = (message: string) => {
         setMessage(message);
-        setCounter(200-message.length);
+        setCounter(messageMaxLength-message.length);
     }
 
     const handleCreate = async () => {
@@ -58,7 +58,7 @@ export const NewMessage = () => {
                     </div>
 
                     <textarea
-                        maxLength={200}
+                        maxLength={messageMaxLength}
                         placeholder="Сообщение"
                         className="modal-textarea"
                         value={message}

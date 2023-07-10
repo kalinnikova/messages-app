@@ -4,8 +4,8 @@ import {IMessage} from "../../models/IMessage";
 import "./AuthorPageStyles.css";
 
 export const AuthorPage = () => {
-    let {authorLogin} = useParams();
-    const {data: messages} = messagesAPI.useFetchAuthorsMessagesQuery(authorLogin ?? "");
+    let {authorLogin = ""} = useParams();
+    const {data: messages} = messagesAPI.useFetchAuthorsMessagesQuery(authorLogin);
 
     return (
         <div className="author-page">
